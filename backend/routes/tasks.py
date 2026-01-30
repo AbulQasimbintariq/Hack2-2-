@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from datetime import datetime
-from ..auth import get_current_user
+from auth import get_current_user
 from sqlmodel import Session, select
 from typing import Optional
 from datetime import datetime

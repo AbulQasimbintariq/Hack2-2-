@@ -17,11 +17,7 @@ interface Task {
   updated_at: string
 }
 
-export default function TasksPage({
-  searchParams,
-}: {
-  searchParams: { status?: 'all' | 'pending' | 'completed' }
-}) {
+export default function TasksPage() {
   const router = useRouter()
   const [tasks, setTasks] = useState<Task[]>([])
   const [status, setStatus] = useState<'all' | 'pending' | 'completed'>('all')
