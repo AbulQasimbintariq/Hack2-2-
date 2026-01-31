@@ -47,16 +47,16 @@ export default function TaskList({ initialTasks }: Props) {
   }
 
   return (
-    <ul className= "space-y-4" >
+    <ul className= "grid gap-4 sm:grid-cols-1 md:grid-cols-2" >
     {
       tasks.map((task) => (
         <TaskItem
-          key= { task.id }
-          task = { task }
-          onToggle = { handleToggle }
-          onDelete = { handleDelete }
+            key= { task.id }
+            task = { task }
+            onToggle = { handleToggle }
+            onDelete = { handleDelete }
         />
-      ))
+        ))
     }
     </ul>
   )
